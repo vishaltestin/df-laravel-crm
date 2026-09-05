@@ -1,0 +1,14 @@
+<?php
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Institute extends Model
+{
+    protected $fillable = ['organization_id','name','description','status'];
+
+    public function programs()
+    {
+        return $this->hasMany(Program::class);
+    }
+}
